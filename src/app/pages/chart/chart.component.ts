@@ -12,9 +12,7 @@ interface ChartInfo {
   templateUrl: './chart.component.html',
   styleUrls: ['./chart.component.scss']
 })
-// class Truncate implements PipeTransform {
-  
-//   }
+
 export class ChartComponent implements OnInit {
 
 
