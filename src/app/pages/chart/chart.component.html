@@ -1,0 +1,93 @@
+<div class="w-72 md:w-5/6 xl:w-3/4 py-3 md:py-7 mx-auto h-screen">
+    <p>
+        QQQ - NASDAQ
+    </p>
+    <div class="flex items-center justify-between flex-wrap">
+        <h2 class="font-bold text-2xl md:text-lg">Invesco QQQ Trust Series 1</h2>
+        <div class="flex justify-between">
+            <button class="flex items-center bonus mx-5 bg-blue-300 shadow-md rounded-2xl py-2 px-5 text-black justify-between">
+                <i class="fa fa-check text-blue-400" aria-hidden="true"></i>
+                <p class="px-2">Following</p>
+            </button>
+
+            <button class="flex items-center bonus bg-white shadow-md rounded-2xl py-2 px-2 text-black justify-between">
+                <i class="fa fa-share-alt text-blue-400" aria-hidden="true"></i>
+                <p class="px-2">Share</p>
+            </button>
+        </div>
+    </div>
+    <hr class="my-3">
+    <div class="flex flex-wrap justify-between">
+        <div class="w-full md:w-3/4 pr-5">
+            <div class="h-auto w-72 md:w-full">
+                <div class="flex mb-3 justify-between w-72 items-center">
+                    <h2 class="font-bold md:text-xl">
+                        $391.20
+                    </h2>
+                    <div class="flex justify-center items-end right-2 px-4 h-7 rounded-md bg-red-200">
+                        <p class="font-bold text-white">+0.08%</p>
+                    </div> 
+                    <div>
+                        <p>-7.59 Today</p>
+                    </div>
+                </div>
+                <!-- <div> -->
+                    <div class="flex">
+                        <p>Pre-market:</p>
+                        <h2 class="font-bold mx-3">$392.78</h2>
+                        <p class="text-xs md:text-sm">( <span class="text-green-300">0.92%</span>)</p>
+                        <p class=" mx-3 text-green-300">+3.58</p>
+
+                    </div>
+                <!-- </div> -->
+                <div>
+                    <p class="text-xs md:text-sm">Closed: 29 Nov, 08:14:19 UTC-5 - USD - NASDAQ - Disclaimer</p>
+                </div>
+              <div echarts [options]="options" class="demo-chart"></div>
+            </div>
+            
+            <div class="mt-2 mr-4 flex h-auto overflow-scroll justify-between relative">
+                <app-stock-card class="flex-1 mx-1" [stockData]="stock" *ngFor="let stock of stockValues"></app-stock-card>
+                <!-- <div class="shadow-2xl h-8 w-8 rounded-full  bg-gray-200 cursor-pointer absolute z-50 top-6 flex justify-center items-center ">
+                    <i class="fa fa-angle-right text-gray-400" aria-hidden="true"></i>
+                </div> -->
+            </div>
+            <!-- chart -->
+        </div>
+
+        <div class=" w-full md:w-3/12 md:mt-20
+        ">
+            <div class=" border pt-4 pb-2 px-4 border-gray-300 rounded-lg mb-2">
+                <div class="flex w-9/12 flex-wrap mb-5">
+                    <div class="flex items-center border my-2 border-gray-300 rounded-2xl py-1 px-2 text-black justify-between">
+                        <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                        <p class=" text-gray-400 text-xs">Most active</p>
+                    </div>
+                    <div class="flex items-center border my-2 mx-1 border-gray-300 rounded-2xl py-1 px-2 text-black justify-between">
+                        <p class=" text-gray-400 text-xs">Stock</p>
+                    </div>
+                    <div class="flex items-center border border-gray-300 rounded-2xl py-1 px-2 text-black justify-between">
+                        <p class=" text-gray-400 text-xs">US listed security</p>
+                    </div>
+                </div>
+                <div class=" border-t border-gray-300 flex justify-between items-center py-2" *ngFor="let item of chartDetails">
+                    <p class="uppercase text-gray-400">{{item.header}}</p>
+                    <h2 class="font-bold text-base">{{item.amount}}</h2>
+                </div>
+            </div>
+            <div class=" border pt-6 pb-2 px-4 border-gray-300 rounded-lg mb-2">
+                <div class="flex justify-between items-center">
+                    <h2 class="font-bold">About</h2>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+
+                </div>
+                <div class=" border-t border-gray-300 flex justify-between items-center py-2">
+                    <p class="uppercase text-gray-400">founded</p>
+                    <h2 class="font-bold text-base">10 Mar 1999</h2>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

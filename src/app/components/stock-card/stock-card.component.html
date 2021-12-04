@@ -1,0 +1,11 @@
+<div class="text-xs md:text-base border pt-2 pb-2 px-4 border-gray-300 rounded-lg mb-2">
+    <p>{{stockData.stock.length < 10 ? stockData.stock : (stockData.stock | slice: 0: 10)}}<span>{{stockData.stock.length < 10 ? "" : '...'}}</span></p> 
+    <h2 class="font-bold">${{stockData.amount}}</h2>
+    <div class="flex justify-between flex-wrap">
+        <p class=" text-gray-400">{{stockData.initial}}</p>
+        <div class=" text-red-600">
+            <i class="fa fa-arrow-down" aria-hidden="true"></i>
+            {{stockData.currentValue}}%
+        </div>
+    </div>
+</div>

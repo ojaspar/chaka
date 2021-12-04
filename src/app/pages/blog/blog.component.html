@@ -1,0 +1,28 @@
+
+<div class="w-72 md:w-3/4 xl:w-2/4 py-3 md:py-7 md:h-auto mx-auto" *ngFor="let item of blogPost">
+    <figure class="md:flex md:p-0">
+        <img class="w-full h-48 md:w-48 md:rounded-md md:h-auto mx-auto" [src]="item.image" alt=""
+            width="384" height="512">
+        <div class="pt-6 md:p-8 text-left space-y-4">
+            <h2 class="text-base md:text-xl font-bold cursor-pointer">
+                {{item.title}}
+            </h2>
+            <p>{{item.slog}}</p>
+            <figcaption class="font-medium">
+                <div class="text-gray-500">
+                    {{item.time}}
+                </div>
+            </figcaption>
+        </div>
+    </figure>
+    
+
+    
+</div> 
+
+
+
+
+
+
+
